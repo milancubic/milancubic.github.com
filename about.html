@@ -1,95 +1,68 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Milan Cubic | About</title>
-    <script>
-        setTimeout(function(){
-          ws = new WebSocket('ws://localhost:35353')
-          ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-        }, 500)
-      </script>
+---
+layout: default
+title: About
+---
 
-<meta charset="UTF-8" />
-<meta name="author" lang="hr" content="Ivana Vasilj, dev@ivana.im" />
-<meta name="viewport" content="width=device-width" />
+<body class="about vcard">
+  <div class="centered">
 
-<link href="site.css" rel="stylesheet" type="text/css" />
+    <header>
+      {% include header.html %}
 
-<script src="http://use.typekit.net/slj1kyc.js" type="text/javascript"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+      <nav class="social">
+        <ol>
+          <li class="twitter"><a href="http://twitter.com/mchubich" rel="me"><img alt="twitter" src="img/icons/twitter.png" /></a></li>
+          <li class="behance"><a href="" rel="me"><img alt="behance" src="img/icons/behance.png" /></a></li>
+          <li class="dribbble"><a href="http://dribbble.com/mchubich" rel="me"><img alt="dribbble" src="img/icons/dribbble.png" /></a></li>
+        </ol>
+      </nav>
+    </header>
 
-  </head>
+    <div>
+      <article>
+        <h2>Thank you.</h2>
+        <p>I’m
+          <span class="fn n" lang="hr"><span class="given-name">Milan</span> <span class="family-name">Čubić</span></span>,
+          a <span class="title">freelance user interface designer</span>.
+          Back in 2010. I cofounded <a href="">Impaddo</a>, a software company focused on development of applications for mobile, particularly Apple iOS platform. Shortly after, I moved on in search of fresh challenges, sold my company and started a new and exciting phase, as a freelancer.
+        </p>
+        <p>Prior to cofounding a company I was employed as a designer and project manager where I designed iOS user interface solutions and managed projects for clients such as <a href="">Swiss Post</a> and <a href="">Blick.ch</a>.</p>
+        <p>Even before that, I was freelancing, designing iOS applications such as <a href="">RTL TV</a> and created iPhone app for viewing showtimes in local cinemas called Movies.</p>
+        <p>Photos on this site were taken by <a href="">Nikola</a> and <a href="">Marina</a> with <a href="">Canon 5D Mark II</a> Digital SLR and <a href="">Nikon D3</a> respectively.</p>
+      </article>
 
-  <body class="about vcard">
-    <div class="centered">
+      <nav class="contact">
+        <ol>
+          <li>
+            <a class="email" href="mailto:work@milancubic.com">
+              <span>design enquiry</span>
+              work@milancubic.com
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hello@milancubic.com">
+              <span>say hi</span>
+              hello@milancubic.com
+            </a>
+          </li>
+          <li>
+            <a href="http://twitter.com/mchubich">
+              <span>elsewhere</span>
+              twitter.com/mchubich
+            </a>
+          </li>
+          <li>
+            <span>phone</span>
+            <div class="tel">00385&nbsp;989379260</div>
 
-      <header>
-        <h1><a href="/">Milan Cubic</a></h1>
+          </li>
+        </ol>
+      </nav>
 
-<nav class="main-nav">
-  <ol>
-    <li class="portfolio"><a href="/">Interface Design</a></li>
-    <li class="about current"><a class=" current" href="about.html">About</a></li>
-    <li class="mail"><a href="mailto:milan@milancubic.com">I'd love to hear from you</a></li>
-  </ol>
-</nav>
-
-
-        <nav class="social">
-          <ol>
-            <li class="twitter"><a href="http://twitter.com/mchubich" rel="me"><img alt="twitter" src="img/icons/twitter.png" /></a></li>
-            <li class="behance"><a href="" rel="me"><img alt="behance" src="img/icons/behance.png" /></a></li>
-            <li class="dribbble"><a href="http://dribbble.com/mchubich" rel="me"><img alt="dribbble" src="img/icons/dribbble.png" /></a></li>
-          </ol>
-        </nav>
-      </header>
-
-      <div>
-        <article>
-          <h2>Thank you.</h2>
-          <p>I’m
-            <span class="fn n" lang="hr"><span class="given-name">Milan</span> <span class="family-name">Čubić</span></span>,
-            a <span class="title">freelance user interface designer</span>.
-            Back in 2010. I cofounded <a href="">Impaddo</a>, a software company focused on development of applications for mobile, particularly Apple iOS platform. Shortly after, I moved on in search of fresh challenges, sold my company and started a new and exciting phase, as a freelancer.
-          </p>
-          <p>Prior to cofounding a company I was employed as a designer and project manager where I designed iOS user interface solutions and managed projects for clients such as <a href="">Swiss Post</a> and <a href="">Blick.ch</a>.</p>
-          <p>Even before that, I was freelancing, designing iOS applications such as <a href="">RTL TV</a> and created iPhone app for viewing showtimes in local cinemas called Movies.</p>
-          <p>Photos on this site were taken by <a href="">Nikola</a> and <a href="">Marina</a> with <a href="">Canon 5D Mark II</a> Digital SLR and <a href="">Nikon D3</a> respectively.</p>
-        </article>
-
-        <nav class="contact">
-          <ol>
-            <li>
-              <a class="email" href="mailto:work@milancubic.com">
-                <span>design enquiry</span>
-                work@milancubic.com
-              </a>
-            </li>
-            <li>
-              <a href="mailto:hello@milancubic.com">
-                <span>say hi</span>
-                hello@milancubic.com
-              </a>
-            </li>
-            <li>
-              <a href="http://twitter.com/mchubich">
-                <span>elsewhere</span>
-                twitter.com/mchubich
-              </a>
-            </li>
-            <li>
-              <span>phone</span>
-              <div class="tel">00385&nbsp;989379260</div>
-
-            </li>
-          </ol>
-        </nav>
-
-        <footer>
-          <p>Copyright © 2010-2012. All rights reserved. None shall steal, you handsome devil, you.</p>
-        </footer>
-      </div>
-
+      <footer>
+        <p>Copyright © 2010-2012. All rights reserved. None shall steal, you handsome devil, you.</p>
+      </footer>
     </div>
-  </body>
-</html>
+
+  </div>
+</body>

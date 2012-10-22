@@ -1,9 +1,9 @@
 (function() {
   var FilmStrip, filmStrip, swapCards, timerFunction;
 
-  timerFunction = 'cubic-bezier(.6, .1, .2, .7)';
+  timerFunction = 'cubic-bezier(.45, 0, .59, 1)';
 
-  $.fx.speeds.medium = 300;
+  $.fx.speeds.medium = 280;
 
   $.fn.translateX = function() {
     var translateMatch;
@@ -26,8 +26,8 @@
     if (el.hasClass('popup')) {
       el.animate({
         opacity: 0,
-        translate3d: '0,5px,0'
-      }, 'medium', timerFunction, function() {
+        translate3d: '0,10px,0'
+      }, 'medium', 'cubic-bezier(.45, 0, .59, 1)', function() {
         return el.remove();
       });
     } else {
@@ -43,7 +43,7 @@
         return el.insertBefore(oldEl).toggleClass('popup').animate({
           opacity: 1,
           translate3d: '0,0,0'
-        }, 'medium', timerFunction);
+        }, 'medium', 'cubic-bezier(0, 0, .62, .99)');
       });
     }
     return false;
@@ -344,7 +344,7 @@
         translate3d: "" + (first ? '-' : '') + offset + "px,0,0",
         scale: scale,
         opacity: .5
-      }, 'medium', timerFunction, function() {
+      }, 300, 'cubic-bezier(.45, 0, .59, 1)', function() {
         card.parent().toggleClass('focus');
         return setTimeout(function() {
           return card.animate({
@@ -352,7 +352,7 @@
             translate3d: '0,0,0',
             scale: 1,
             opacity: losingFocus ? backOpacity : 1
-          }, 'medium', timerFunction);
+          }, 300, 'cubic-bezier(.45, 0, .59, 1)');
         }, 20);
       });
     });

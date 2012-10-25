@@ -403,3 +403,35 @@
   });
 
 }).call(this);
+
+/*
+Delete hover rules for touch devices
+*/
+
+
+(function() {
+  var idx, idxs, ignore, rule, stylesheet, _i, _j, _len, _len2, _len3, _ref, _ref2;
+
+  if ('createTouch' in document) {
+    ignore = /:hover\b/;
+    try {
+      _ref = document.styleSheets;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        stylesheet = _ref[_i];
+        idxs = [];
+        _ref2 = stylesheet.cssRules;
+        for (idx = 0, _len2 = _ref2.length; idx < _len2; idx++) {
+          rule = _ref2[idx];
+          if (rule.type === CSSRule.STYLE_RULE && ignore.test(rule.selectorText)) {
+            idxs.unshift(idx);
+          }
+        }
+        for (_j = 0, _len3 = idxs.length; _j < _len3; _j++) {
+          idx = idxs[_j];
+          stylesheet.deleteRule(idx);
+        }
+      }
+    } catch (_error) {}
+  }
+
+}).call(this);

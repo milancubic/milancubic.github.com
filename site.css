@@ -52,7 +52,7 @@ a {
 
 .hide a, .show a {
   color: #8C8C8C; }
- 
+
 .with-icon {
   padding: 0 18px 2px 0;
   background: no-repeat right; }
@@ -97,7 +97,7 @@ header {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 258px;
-  padding-top: 125px; }  
+  padding-top: 125px; }
   @media screen and (max-height: 1050px) {
    header {
      height: 158px;
@@ -106,8 +106,8 @@ header {
   @media screen and (max-height: 768px) {
     header {
       height: 148px;
-      padding-top: 55px;}}   
-  
+      padding-top: 55px;}}
+
 /* about */
 .about {
   background: #09080d;
@@ -535,3 +535,4 @@ nav li {
       background: #fafafa; }
   .contact li:last-child a {
     padding: 0; }
+  .contact .tel a { border-right: 0 none }

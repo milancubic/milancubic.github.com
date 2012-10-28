@@ -489,11 +489,11 @@ nav li {
 .social {
   margin-top: -8px; }
   .social .twitter a:hover img, .social .twitter a:active img {
-    background-image: url(img/icons/twitter-glow.png); }
+    background-image: none; }
   .social .behance a:hover img, .social .behance a:active img {
-    background-image: url(img/icons/behance-glow.png); }
+    background-image: none; }
   .social .dribbble a:hover img, .social .dribbble a:active img {
-    background-image: url(img/icons/dribbble-glow.png); }
+    background-image: none; }
 
 .contact {
   font-size: 16px;

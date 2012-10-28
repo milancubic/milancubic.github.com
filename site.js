@@ -55,6 +55,29 @@
   });
 
   /*
+  Play video on click
+  */
+
+
+  $(document).on('click', '.video-play', function() {
+
+    var playLink = $(this),
+    video;
+
+    playLink.parent().animate({"opacity" : 0}, 300);
+    video = filmStrip.currentFigure.children('.desc + figure video');
+
+    if (video.size()) {
+      video.get(0).play();
+      video.on('ended', function(e) {
+        playLink.text("Replay");
+        playLink.parent().animate({"opacity" : 1}, 300);
+      });
+    }
+
+  });
+
+  /*
   FilmStrip - helper class for prev / next transitioning
   */
 
@@ -69,7 +92,7 @@
       this.currentFigure = this.figures().first().addClass('current');
       this.currentPosition = 0;
       this.showLabels();
-      this.playVideo();
+      this.showVideoControls();
       this.strip.on('click', 'figure img, figure video', function(e) {
         var targetFigure;
         targetFigure = $(e.target).closest('figure');
@@ -127,7 +150,7 @@
       }
       this.showLabels();
       return setTimeout(function() {
-        return _this.playVideo();
+        return _this.showVideoControls();
       }, $.fx.speeds.medium);
     };
 
@@ -192,6 +215,12 @@
       });
     };
 
+    FilmStrip.prototype.showVideoControls = function() {
+      var videoControl = this.currentFigure.find('figcaption.video-controls');
+      $('figcaption.video-control').css("opacity", 0);
+      return videoControl.animate({"opacity" : 1}, 300);
+    };
+
     FilmStrip.prototype.showCards = function() {
       var figureHeight;
       figureHeight = (this.currentFigure.find('img, video').filter(function() {
@@ -246,14 +275,6 @@
       }, 'medium', timerFunction, function() {
         return $(this).hide();
       });
-    };
-
-    FilmStrip.prototype.playVideo = function() {
-      var video;
-      video = this.currentFigure.children('.desc + figure video');
-      if (video.size()) {
-        return video.get(0).play();
-      }
     };
 
     return FilmStrip;

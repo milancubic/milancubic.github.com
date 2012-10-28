@@ -227,6 +227,7 @@ header {
   .filmstrip figure {
     -webkit-transform: translateZ(0);
     float: left;
+    position: relative;
     margin-right: 115px; }
     .filmstrip figure img {
       display: inline-block; }
@@ -246,6 +247,31 @@ header {
   .filmstrip article {
     float: left;
     padding-top: 5px; }
+
+/* video controls */
+figcaption.video-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 17px;
+  color: white;
+  width: 300px;
+  z-index: 24;
+  opacity: 0;}
+  .video-play {
+    display: inline-block;
+    background: url(img/icons/play-arrow.png) center left no-repeat;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff; }
+    .video-play:hover {
+      cursor: pointer; }
+  .video-date {
+    padding-top: 10px;
+    margin: 10px 0 5px;
+    background: url(img/icons/date-separator.png) top left no-repeat;
+    font-size: 13px;
+    color: #dbdbdb; }
 
 /* cards */
 figcaption {

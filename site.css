@@ -257,7 +257,7 @@ figcaption.video-controls {
   width: 600px;
   height: 400px;
   background: url(img/icons/shadow.png) bottom left no-repeat;
-  z-index: 24;
+  z-index: 0;
   opacity: 0;}
   .video-play {
     display: inline-block;

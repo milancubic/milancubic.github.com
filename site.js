@@ -87,12 +87,19 @@
   FilmStrip = (function() {
 
     function FilmStrip(strip) {
-      var _this = this;
+      var _this = this,
+      video;
       this.strip = $(strip);
       this.currentFigure = this.figures().first().addClass('current');
       this.currentPosition = 0;
       this.showLabels();
-      this.showVideoControls();
+      video = this.currentFigure.children('.desc + figure video');
+      if (video.load()) {
+        // video.on('canplay', function(e) {
+        //   return _this.showVideoControls();
+        // });
+        this.showVideoControls();
+      }
       this.strip.on('click', 'figure img, figure video', function(e) {
         var targetFigure;
         targetFigure = $(e.target).closest('figure');
@@ -217,8 +224,8 @@
 
     FilmStrip.prototype.showVideoControls = function() {
       var videoControl = this.currentFigure.find('figcaption.video-controls');
-      $('figcaption.video-control').css("opacity", 0);
-      return videoControl.animate({"opacity" : 1}, 300);
+      $('figcaption.video-control').css({"opacity": 0, "z-index" : 0});
+      return videoControl.css("z-index", 24).animate({"opacity" : 1}, 300);
     };
 
     FilmStrip.prototype.showCards = function() {

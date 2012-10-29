@@ -251,14 +251,19 @@ header {
 /* video controls */
 figcaption.video-controls {
   position: absolute;
-  bottom: 15px;
-  left: 17px;
+  bottom: 0;
+  left: 0;
   color: white;
-  width: 300px;
+  width: 600px;
+  height: 400px;
+  background: url(img/icons/shadow.png) bottom left no-repeat;
   z-index: 24;
   opacity: 0;}
   .video-play {
     display: inline-block;
+    position: absolute;
+    left: 17px;
+    bottom: 60px;
     background: url(img/icons/play-arrow.png) center left no-repeat;
     padding-left: 20px;
     font-size: 15px;
@@ -268,7 +273,9 @@ figcaption.video-controls {
       cursor: pointer; }
   .video-date {
     padding-top: 10px;
-    margin: 10px 0 5px;
+    position: absolute;
+    left: 17px;
+    bottom: 17px;
     background: url(img/icons/date-separator.png) top left no-repeat;
     font-size: 13px;
     color: #dbdbdb; }

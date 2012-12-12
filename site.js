@@ -64,14 +64,20 @@
     var playLink = $(this),
     video;
 
-    playLink.parent().animate({"opacity" : 0}, 300);
-    video = filmStrip.currentFigure.children('.desc + figure video');
+    playLink.parent().animate({"opacity" : 0}, 100);
+    video = filmStrip.currentVideo();
 
     if (video.size()) {
       video.get(0).play();
+      video.addClass("playing");
       video.on('ended', function(e) {
         playLink.text("Replay");
-        playLink.parent().animate({"opacity" : 1}, 300);
+        video.removeClass("playing");
+        if (video.parent().hasClass('current')) {
+          playLink.parent().animate({"opacity" : 1}, 250);
+        } else {
+          playLink.parent().hide();
+        }
       });
     }
 
@@ -93,11 +99,8 @@
       this.currentFigure = this.figures().first().addClass('current');
       this.currentPosition = 0;
       this.showLabels();
-      video = this.currentFigure.children('.desc + figure video');
+      video = this.currentVideo();
       if (video.load()) {
-        // video.on('canplay', function(e) {
-        //   return _this.showVideoControls();
-        // });
         this.showVideoControls();
       }
       this.strip.on('click', 'figure img, figure video', function(e) {
@@ -147,6 +150,7 @@
         this.hideCards();
       }
       this.hideLabels();
+      this.hideVideoControls();
       this.currentFigure.removeClass('current');
       this.currentFigure = figure;
       this.currentFigure.addClass('current');
@@ -222,10 +226,39 @@
       });
     };
 
+    FilmStrip.prototype.currentVideo = function() {
+      return this.currentFigure.children('.desc + figure video');
+    };
+
+    FilmStrip.prototype.currentControls = function() {
+      return this.currentFigure.children('figcaption.video-controls');
+    };
+
     FilmStrip.prototype.showVideoControls = function() {
-      var videoControl = this.currentFigure.find('figcaption.video-controls');
-      $('figcaption.video-control').css({"opacity": 0, "z-index" : 0});
-      return videoControl.css("z-index", 24).animate({"opacity" : 1}, 300);
+      var video = this.currentVideo();
+      if (!video.hasClass('playing')) {
+        return this.currentControls().css({
+          display: 'block',
+          opacity: 0
+        }).animate({
+          opacity: 1
+        }, 250, timerFunction);
+      } else {
+        return false;
+      }
+    };
+
+    FilmStrip.prototype.hideVideoControls = function() {
+      var video = this.currentVideo();
+      if (!video.hasClass('playing')) {
+        return this.currentControls().animate({
+          opacity: 0
+        }, 'medium', timerFunction, function() {
+          return $(this).hide();
+        });
+      } else {
+        return false;
+      }
     };
 
     FilmStrip.prototype.showCards = function() {

@@ -216,7 +216,7 @@ header {
   height: 900px;
   margin-top: -55px; }
 
-.filmstrip {
+.filmstrip {  
   zoom: 1;
   width: 100000px; }
   .filmstrip:before, .filmstrip:after {
@@ -228,9 +228,12 @@ header {
     -webkit-transform: translateZ(0);
     float: left;
     position: relative;
-    margin-right: 115px; }
+    margin-right: 200px;}
+    @media only screen and (max-width: 1440px) {
+        .filmstrip figure { 
+          margin-right: 110px; } }
     .filmstrip figure img {
-      display: inline-block; }
+      display: inline-block;}
     .filmstrip figure img, .filmstrip figure video {
       position: relative;
       z-index: 23; }
@@ -248,37 +251,72 @@ header {
     float: left;
     padding-top: 5px; }
 
+@media only screen and (min-width: 1025px) {
+  .iphone-shadow, .bada-shadow, .ammo-shadow, .spox-shadow, .webtrekk-shadow {
+    position: absolute;
+    left: -11px;
+    top: -5px; }
+
+  .ammo-shadow, .spox-shadow, .webtrekk-shadow {
+    width: 1022px; }
+
+  .iphone-shadow {
+    width: 478px;
+    height: 706px;
+    background: url(img/bgr/iphone4-frame.png) center center no-repeat; }
+
+  .bada-shadow {
+    width: 478px;
+    height: 746px;
+    background: url(img/bgr/bada-frame.png) center center no-repeat; }
+
+  .ammo-shadow {
+    height: 659px;
+    background: url(img/projects/03-ammo-rack/photo-frame.png) center center no-repeat; }
+
+  .spox-shadow {
+    height: 584px;
+    background: url(img/projects/01-spox/intro-frame.png) center center no-repeat; } 
+
+  .webtrekk-shadow {
+    height: 733px;
+    background: url(img/projects/02-webtrekk/intro-frame.png) center center no-repeat; }}
+
 /* video controls */
 figcaption.video-controls {
   position: absolute;
-  bottom: 0;
+  bottom: 6px;
   left: 0;
   color: white;
-  width: 600px;
-  height: 400px;
-  background: url(img/icons/shadow.png) bottom left no-repeat;
-  z-index: 0;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  width: 170px;
+  /*height: 400px;
+  background: url(img/icons/shadow.png) bottom left no-repeat;*/
+  z-index: 24;
+  display: none;
   opacity: 0;}
   .video-play {
     display: inline-block;
     position: absolute;
     left: 17px;
-    bottom: 60px;
+    bottom: 43px;
     background: url(img/icons/play-arrow.png) center left no-repeat;
     padding-left: 20px;
     font-size: 15px;
     font-weight: 600;
     color: #fff; }
     .video-play:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      text-decoration: underline; }
   .video-date {
-    padding-top: 10px;
+    padding-top: 8px;
     position: absolute;
     left: 17px;
-    bottom: 17px;
+    bottom: 11px;
     background: url(img/icons/date-separator.png) top left no-repeat;
     font-size: 13px;
-    color: #dbdbdb; }
+    font-weight: 600;
+    color: rgba(250, 250, 250, 0.75); }
 
 /* cards */
 figcaption {

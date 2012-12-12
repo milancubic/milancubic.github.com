@@ -18,65 +18,104 @@ title: Interface Design
   <div class="container"><div>
     <div class="filmstrip">
 
-      <!-- article = project -->
+      <!-- Ammo Rack, iPhone and iPad -->
       <article>
-        <!-- project description -->
         <div class="desc">
-          <h2><a class="with-icon" href=""><b>Spox</b>, Samsung Bada</a></h2>
+          <h2><a class="with-icon" href=""><b>AMMO Rack</b>, iPhone and iPad</a></h2>
           <div>
-            <p>For this redesign, <a href=""><strong>Evite</strong></a> asked Fi to bring a fresh, modern look to their site while making the experience more social and fun.</p>
+            <p>Document managemant application for iOS from <a href="http://www.amphetamobile.com/apps/ammo-rack/"><strong>Amphetamobile</strong></a>.</p>
             <p><a class="with-icon goto" href="#next">Go to case study</a></p>
           </div>
         </div>
 
-        <!-- figures = project slides, can contain img or video elements, followed by figcaption if contain cards as well -->
-
-        <!-- example of project intro video -->
         <figure>
-          <video poster="video/Baseball.jpg" width="1000">
-            <source src="video/Baseball.mp4" type="video/mp4">
-            <source src="video/Baseball.webm" type="video/webm">
+          <video poster="img/projects/03-ammo-rack/photo.jpg" width="1000">
+            <source src="" type="video/mp4">
+            <source src="" type="video/webm">
           </video>
-          <figcaption class="video-controls">
-            <p class="video-play">Play</p>
-            <p class="video-date">Wed, October 3rd, 2012</p>
-          </figcaption>
+        <div class="ammo-shadow"></div>  
         </figure>
 
-        <!-- example of iPad landscape screenshot with cards -->
-        <figure>
-          <!-- show / hide desc and use cases -->
-          <p class="show"><a href="#"><span>Show description and use cases</span></a></p>
-          <p class="hide"><a href="#"><span>Hide description and use cases</span></a></p>
-
-          <img alt="screenshot description" src="img/projects/iPad1.jpg" width="1000" />
-
-          <!-- cards -->
+        <!-- 01 -->
+        <figure class="iPhone">
+          <video poster="" width="456">
+            <source src="video/03-ammo-rack/01.mp4" type="video/mp4">
+            <source src="video/03-ammo-rack/01.webm" type="video/webm">
+          </video>
+          <div class="iphone-shadow"></div>
           <figcaption><div>
-            <!-- description card -->
             <div class="cardwrapper focus"><div class="card">
-              <p>It is very convenient to create your agenda for today by tapping the Today icon in the toolbar.</p>
-              <p>Notice that the checkboxes transform into a star. Simply tap an item to show it in the Today list. Tap the item again to remove it from Today.</p>
-              <p>We wanted this MacBook Pro to have a screen as vivid as your imagination.</p>
-              <p>A screen where everything you see is remarkably vibrant, detailed, and sharp.</p>
-              <p>The new Retina display reduces glare while maintaining incredible color and quality. In fact, it has a 29 percent higher contrast ratio than a standard MacBook Pro display.</p>
-              <p>Blacks are blacker. Whites are whiter. And everything in between is rich and vibrant. IPS technology gives you a wide, 178-degree view of everything on the screen, so you’ll see the difference at practically any angle. And you’re going to love what you see.</p>
+              <p>In May, 2011, thanks to <a href="http://yesterdayishere.com/now/"><strong>Bojan Janjanin</strong></a>, I had an honor of working with team behind <a href="http://www.amphetamobile.com"><strong>Amphetamobile</strong></a> on their new document management app for iOS.</p>
+              <p>When Amphetamobile asked me to help them design their new application, they already had a working prototype of the app and a general idea what they wanted it to become. Together, we took their ideas as a starting point and refined them. As a result, AMMO Rack was featured by Apple in U.S. App Store, among others, for over a week.</p>
+              <p>After initial exploring of a few different approaches we decided to go with a rack metaphor. From the start, we wanted to create visual identity that will communicate sturdiness. When used, we wanted for device to become a rack.</p>
+              <p>Application would be able to store multiple categories of media, PDFs, photos or books, and we wanted to present that data all upfront, by using rack metaphor where one shelf would present one category we where able to solve that problem.</p>
               <p class="switch"><a href="#">Switch to use cases</a></p>
             </div></div>
-            <!-- use cases card: the number of li elements must conform to the number of video elements -->
             <div class="cardwrapper"><div class="card">
               <ol>
                 <li>
-                  <h3>Act on the spot</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
+                  <h3>Shelfs</h3>
+                  <p>Every category has its own shelf and browsing trough categories is done by swiping left or right. Appearance and behavior communicates that swiping is possible without need of using any progress bar or any other indicator.</p>
+                </li>
+              </ol>
+              <p class="switch"><a href="#">Switch to description</a></p>
+            </div></div>
+          </div></figcaption>
+        </figure>
+
+        <!-- 02 -->
+        <figure class="iPhone">
+          <video poster="" width="456">
+            <source src="video/03-ammo-rack/02.mp4" type="video/mp4">
+            <source src="video/03-ammo-rack/02.webm" type="video/webm">
+          </video>
+          <div class="iphone-shadow"></div>
+          <figcaption><div>
+            <div class="cardwrapper focus"><div class="card">
+              <p>Even though in Edit mode, we can rearrange, add, or even remove entire shelfs. We still wanted to create a quick and delightful way to "hide" those shelfs that we do not want to use or show.</p>
+              <p>Guys from Amphetamobile came up with an idea of collapsable shelfs that I really liked and decided to explore further. We wanted to make sure that the solution will be tap friendly and not get in a way of main task which was reading selected documents.</p>
+              <p>In the end we created a solution that is available only when needed, while the rest of the time it is neatly tucked out of our way.</p>
+              <p class="switch"><a href="#">Switch to use cases</a></p>
+            </div></div>
+            <div class="cardwrapper"><div class="card">
+              <ol>
+                <li>
+                  <h3>Collapsing shelfs</h3>
+                  <p>Swiping right will reveal Collapse button. Simple tap on arrow will close shelf. Taping the row (doors) again will expand shelf and revel items on it.</p>
+                </li>
+              </ol>
+              <p class="switch"><a href="#">Switch to description</a></p>
+            </div></div>
+          </div></figcaption>
+        </figure>
+
+        <!-- 03 -->
+        <figure class="iPhone">
+          <video poster="" width="456">
+            <source src="video/03-ammo-rack/03.mp4" type="video/mp4">
+            <source src="video/03-ammo-rack/03.webm" type="video/webm">
+          </video>
+          <video poster="" width="456">
+            <source src="video/03-ammo-rack/04.mp4" type="video/mp4">
+            <source src="video/03-ammo-rack/04.webm" type="video/webm">
+          </video>
+          <div class="iphone-shadow"></div>
+          <figcaption><div>
+            <div class="cardwrapper focus"><div class="card">
+              <p>Solutions we designed for reading books, PDFs or viewing photos is something I'm particularly proud off.</p>
+              <p>I'm big believer in following the conventions of platform we design for and only once we truly understand all of the rules, only than we can start bending that rules, shaping them for our need, build upon them or even brake them. And that is exactly what we did here.</p>
+              <p>Building on foundation of "one shelf equals one category" we designed a way to swap an item without even leaving current screen, without the need to go back on Rack just to select another document.</p>
+              <p class="switch"><a href="#">Switch to use cases</a></p>
+            </div></div>
+            <div class="cardwrapper"><div class="card">
+              <ol>
+                <li>
+                  <h3>Slide-in shelf</h3>
+                  <p>When reading a document we can quickly swap to another for reference and back again without even leaving the screen. Taping anywhere on the screen will call all UI elements, together with all documents on current shelf.</p>
                 </li>
                 <li>
-                  <h3>Act on the spot</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
-                </li>
-                <li>
-                  <h3>Act on the spot</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
+                  <h3>Selecting another item</h3>
+                  <p>On previous case we can notice that while all elements fade in and shelf slides in, which is specially important to help us build the sense that the shelf can be additionally moved, revealing items it contains. From there, sliding and selecting another item is just a tap away.</p>
                 </li>
               </ol>
               <p class="switch"><a href="#">Switch to description</a></p>
@@ -85,60 +124,55 @@ title: Interface Design
         </figure>
       </article>
 
+      <!-- Webtrekk, iPhone -->
       <article>
         <div class="desc">
-          <h2><a class="with-icon" href=""><b>Ammo Rack</b>, iPhone portrait</a></h2>
+          <h2><a class="with-icon" href=""><b>Webtrekk</b>, iPhone</a></h2>
           <div>
-            <p>For this redesign, <a href=""><strong>Evite</strong></a> asked Fi to bring a fresh, modern look to their site while making the experience more social and fun.</p>
+            <p><a href="http://www.webtrekk.com"><strong>Webtrekk</strong></a>, app for Berlin based provider of high-end web analytics and their premium web analytics system <a href="http://www.webtrekk.com/en/products/q3.html"><strong>Webtrekk Q3</strong></a>.</p>
             <p><a class="with-icon goto" href="#next">Go to case study</a></p>
           </div>
         </div>
 
         <figure>
-          <video poster="" width="1000">
-            <source src="video/Webtrekk.mp4" type="video/mp4">
-            <source src="video/Webtrekk.webm" type="video/webm">
+          <video poster="img/projects/02-webtrekk/intro.jpg" width="1000">
+            <source src="video/02-webtrekk/Webtrekk.mp4" type="video/mp4">
+            <source src="video/02-webtrekk/Webtrekk.webm" type="video/webm">
           </video>
+          <div class="webtrekk-shadow"></div>
           <figcaption class="video-controls">
             <p class="video-play">Play</p>
-            <p class="video-date">Wed, October 23rd, 2012</p>
+            <p class="video-date">April 9th, 2011</p>
           </figcaption>
         </figure>
 
-        <!-- example of iPhone portrait project with cards and use case videos -->
+        <!-- 01 -->
         <figure class="iPhone">
           <video poster="" width="456">
-            <source src="video/01.mov">
+            <source src="video/02-webtrekk/01.mp4" type="video/mp4">
+            <source src="video/02-webtrekk/01.webm" type="video/webm">
           </video>
-          <video width="456">
-            <source src="video/02.mov">
+          <video poster="" width="456">
+            <source src="video/02-webtrekk/02.mp4" type="video/mp4">
+            <source src="video/02-webtrekk/02.webm" type="video/webm">
           </video>
-          <video width="456">
-            <source src="video/03.mov">
-          </video>
+          <div class="iphone-shadow"></div>
           <figcaption><div>
             <div class="cardwrapper focus"><div class="card">
-              <p>It is very convenient to create your agenda for today by tapping the Today icon in the toolbar.</p>
-              <p>Notice that the checkboxes transform into a star. Simply tap an item to show it in the Today list. Tap the item again to remove it from Today.</p>
-              <p>We wanted this MacBook Pro to have a screen as vivid as your imagination.</p>
-              <p>A screen where everything you see is remarkably vibrant, detailed, and sharp.</p>
-              <p>The new Retina display reduces glare while maintaining incredible color and quality. In fact, it has a 29 percent higher contrast ratio than a standard MacBook Pro display.</p>
-              <p>Blacks are blacker. Whites are whiter. And everything in between is rich and vibrant. IPS technology gives you a wide, 178-degree view of everything on the screen, so you’ll see the difference at practically any angle. And you’re going to love what you see.</p>
+              <p>Designing Webtrekk application was one of the the most ambitious and challenging projects I've worked on at <a href="http://impaddo.com/en/"><strong>Impaddo</strong></a>. <a href="http://www.webtrekk.com/en/products/q3.html"><strong>Webtrekk Q3</strong></a> is an amazing and tremendous web analytics system, with huge range of filters and analysis functions, and bringing it from desktop to iOS was a particularly exciting challenge.</p>
+              <p>Wrangling the amount of content was no trivial pursuit, it was very important to avoid the problem of potential deep level navigation. Like always, I started by creating wireframes for every screen and state with detailed information architecture and documentation. Sketching a wireframe allowed me to quickly and easily explain the ideas behind concepts.</p>
+              <p>My favorite part is work done around different ways of showing graphs and tables of data and interactions designed for manipulating them.</p>
               <p class="switch"><a href="#">Switch to use cases</a></p>
             </div></div>
             <div class="cardwrapper"><div class="card">
               <ol>
                 <li>
-                  <h3>Click to play 01</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
+                  <h3>Viewing different parameters</h3>
+                  <p>While list above graph summarize the amount in observed time, graph it self shows trends in that same time. Taping on different parameters changes presented data while animation grabs our attention and focuses us back on now changed graph.</p>
                 </li>
                 <li>
-                  <h3>Act on the spot</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
-                </li>
-                <li>
-                  <h3>Act on the spot</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
+                  <h3>Details on trends</h3>
+                  <p>Since we were not satisfied by showing just graphs and not details in it, and I didn't want to show a bunch of numbers on some other screen, we came up with an elegant way to show them on current graph.</p>
                 </li>
               </ol>
               <p class="switch"><a href="#">Switch to description</a></p>
@@ -146,39 +180,32 @@ title: Interface Design
           </div></figcaption>
         </figure>
 
+        <!-- 02 -->
         <figure class="iPhone">
           <video poster="" width="456">
-            <source src="video/04.mov">
+            <source src="video/02-webtrekk/03.mp4" type="video/mp4">
+            <source src="video/02-webtrekk/03.webm" type="video/webm">
           </video>
-          <video width="456">
-            <source src="video/06.mov">
+          <video poster="" width="456">
+            <source src="video/02-webtrekk/04.mp4" type="video/mp4">
+            <source src="video/02-webtrekk/04.webm" type="video/webm">
           </video>
-          <video width="456">
-            <source src="video/06.mov">
-          </video>
+          <div class="iphone-shadow"></div>
           <figcaption><div>
             <div class="cardwrapper focus"><div class="card">
-              <p>It is very convenient to create your agenda for today by tapping the Today icon in the toolbar.</p>
-              <p>Notice that the checkboxes transform into a star. Simply tap an item to show it in the Today list. Tap the item again to remove it from Today.</p>
-              <p>We wanted this MacBook Pro to have a screen as vivid as your imagination.</p>
-              <p>A screen where everything you see is remarkably vibrant, detailed, and sharp.</p>
-              <p>The new Retina display reduces glare while maintaining incredible color and quality. In fact, it has a 29 percent higher contrast ratio than a standard MacBook Pro display.</p>
-              <p>Blacks are blacker. Whites are whiter. And everything in between is rich and vibrant. IPS technology gives you a wide, 178-degree view of everything on the screen, so you’ll see the difference at practically any angle. And you’re going to love what you see.</p>
+              <p>Webtrekk is proud on an a fact that they offer a way for clients to tailor their own analyzes individually and precisely for any time period they desire. With that in mind we wanted to create the same ability in our application, but also make sure it's shaped for use on mobile devices.</p>
+              <p>Early in process we discovered four most-used periods and offered them right up front while the rest was put one level deeper for easy find but still out of the way.</p>
               <p class="switch"><a href="#">Switch to use cases</a></p>
             </div></div>
             <div class="cardwrapper"><div class="card">
               <ol>
                 <li>
-                  <h3>Act on the spot 02</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
+                  <h3>Default time periods</h3>
+                  <p>Controls for four most observed time periods was placed above graph for easy access while the rest is available under + icon located on toolbar, bottom right.</p>
                 </li>
                 <li>
-                  <h3>Act on the spot</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
-                </li>
-                <li>
-                  <h3>Act on the spot</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
+                  <h3>Setting Custom time period</h3>
+                  <p>Setting Custom time period is easily achieved by taping on + icon located on toolbar or even above graph in case where there is nothing yet set, like in our example. Notice that once we set our custom period, calendar with plus icon above graph changes in checkmark indicating that we are all set to fetch data for a new period.</p>
                 </li>
               </ol>
               <p class="switch"><a href="#">Switch to description</a></p>
@@ -186,32 +213,129 @@ title: Interface Design
           </div></figcaption>
         </figure>
 
+        <!-- 03 -->
         <figure class="iPhone">
           <video poster="" width="456">
-            <source src="video/06.mov">
+            <source src="video/02-webtrekk/05.mp4" type="video/mp4">
+            <source src="video/02-webtrekk/05.webm" type="video/webm">
           </video>
-          <video width="456">
-            <source src="video/06.mov">
-          </video>
+          <div class="iphone-shadow"></div>
           <figcaption><div>
             <div class="cardwrapper focus"><div class="card">
-              <p>It is very convenient to create your agenda for today by tapping the Today icon in the toolbar.</p>
-              <p>Notice that the checkboxes transform into a star. Simply tap an item to show it in the Today list. Tap the item again to remove it from Today.</p>
-              <p>We wanted this MacBook Pro to have a screen as vivid as your imagination.</p>
-              <p>A screen where everything you see is remarkably vibrant, detailed, and sharp.</p>
-              <p>The new Retina display reduces glare while maintaining incredible color and quality. In fact, it has a 29 percent higher contrast ratio than a standard MacBook Pro display.</p>
-              <p>Blacks are blacker. Whites are whiter. And everything in between is rich and vibrant. IPS technology gives you a wide, 178-degree view of everything on the screen, so you’ll see the difference at practically any angle. And you’re going to love what you see.</p>
+              <p>Presenting data in tables was another big challenge when designing this app.</p>
+              <p>It was not uncommon to have tables with more than a dozen columns and multiple rows. Showing all that data at once on a such a small device like iPhone was not practical, so we needed to come up with a solution that was in the same time useful and painless to use.</p>
               <p class="switch"><a href="#">Switch to use cases</a></p>
             </div></div>
             <div class="cardwrapper"><div class="card">
               <ol>
                 <li>
-                  <h3>Act on the spot 03</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
+                  <h3>Tables</h3>
+                  <p>We studied the idea behind tables and tried to combine it with the concept of moving panels. In the end, outcome exhibited enough flexibility no matter the size or device orientation, so we decided to use it throughout the app.</p>
+                </li>
+              </ol>
+              <p class="switch"><a href="#">Switch to description</a></p>
+            </div></div>
+          </div></figcaption>
+        </figure>
+
+        <!-- 04 -->
+        <figure class="iPhone">
+          <video poster="" width="456">
+            <source src="video/02-webtrekk/06.mp4" type="video/mp4">
+            <source src="video/02-webtrekk/06.webm" type="video/webm">
+          </video>
+          <div class="iphone-shadow"></div>
+          <figcaption><div>
+            <div class="cardwrapper focus"><div class="card">
+              <p>Showing graphs in landscape orientation was particularly fun detail to work on. We especially wanted to put focus on transitions between screens and animations that accompanied it.</p>
+              <p class="switch"><a href="#">Switch to use cases</a></p>
+            </div></div>
+            <div class="cardwrapper"><div class="card">
+              <ol>
+                <li>
+                  <h3>Landscape orientation</h3>
+                  <p>Rotating device in landscape orientation shows graphs in full, more detailed view.</p>
+                </li>
+              </ol>
+              <p class="switch"><a href="#">Switch to description</a></p>
+            </div></div>
+          </div></figcaption>
+        </figure>
+      </article>
+
+      <!-- Spox, Samsung Bada -->
+      <article>
+        <div class="desc">
+          <h2><a class="with-icon" href=""><b>Spox</b>, Samsung Bada</a></h2>
+          <div>
+            <p>Bada application for <a href="http://www.spox.com"><strong>Spox</strong></a>, "a leading destination for over 1.3 million German sports fans each month."</p>
+            <p><a class="with-icon goto" href="#next">Go to case study</a></p>
+          </div>
+        </div>
+
+        <figure>
+          <video poster="img/projects/01-spox/intro.jpg" width="1000">
+            <source src="video/01-spox/Baseball.mp4" type="video/mp4">
+            <source src="video/01-spox/Baseball.webm" type="video/webm">
+          </video>
+          <div class="spox-shadow"></div>
+          <figcaption class="video-controls">
+            <p class="video-play">Play</p>
+            <p class="video-date">March 1st, 2011</p>
+          </figcaption>  
+        </figure>
+
+        <!-- 01 -->
+        <figure class="iPhone">
+          <video poster="" width="456">
+            <source src="video/01-spox/01.mp4" type="video/mp4">
+            <source src="video/01-spox/01.webm" type="video/webm">
+          </video>
+          <div class="bada-shadow"></div>
+          <figcaption><div>
+            <div class="cardwrapper focus"><div class="card">
+              <p><a href="http://www.spox.com"><strong>Spox.com</strong></a>, a division of <a href="http://www.performgroup.co.uk"><strong>Perform Group PLC</strong></a>, provides sports fans in Germany with coverage of a variety of sports from all the most influential leagues.</p>
+              <p>Although Spox already had an iPhone and Android version of the application they gave me freedom to start from scratch.</p>
+              <p>Together, we revised their content strategy, simplified flows and ideas behind it and created altogether simpler application with focus on content, custom visuals and engaging interactions while still following brand culture.</p>
+              <p class="switch"><a href="#">Switch to use cases</a></p>
+            </div></div>
+            <div class="cardwrapper"><div class="card">
+              <ol>
+                <li>
+                  <h3>Custom visual and interaction design</h3>
+                  <p>We took the opportunity to customize every detail of UI while still following Bada design guidelines.</p>
+                </li>
+              </ol>
+              <p class="switch"><a href="#">Switch to description</a></p>
+            </div></div>
+          </div></figcaption>
+        </figure>
+
+        <!-- 02 -->
+        <figure class="iPhone">
+          <video poster="" width="456">
+            <source src="video/01-spox/02.mp4" type="video/mp4">
+            <source src="video/01-spox/02.webm" type="video/webm">
+          </video>
+          <video poster="" width="456">
+            <source src="video/01-spox/03.mp4" type="video/mp4">
+            <source src="video/01-spox/03.webm" type="video/webm">
+          </video>
+          <div class="bada-shadow"></div>
+          <figcaption><div>
+            <div class="cardwrapper focus"><div class="card">
+              <p>We wanted to make sure that reading and viewing articles is as enjoyable as it can be, especially on a mobile device. We think that we succeeded in that. Larger font size, full width images or videos thumbnails are the details that make the difference, invisible at first but noticeable when missing.</p>
+              <p class="switch"><a href="#">Switch to use cases</a></p>
+            </div></div>
+            <div class="cardwrapper"><div class="card">
+              <ol>
+                <li>
+                  <h3>Quick browsing through articles</h3>
+                  <p>To avoid jumping level up and back down just to read another article, we enabled changing them just by swiping left or right. Page indicator above text indicates which one is currently visible and difference in colors represents read articles from unread.</p>
                 </li>
                 <li>
-                  <h3>Act on the spot</h3>
-                  <p>When entering new to-dos you can quickly add all important information: enter the title, notes, and due date. You can also tag to-dos so you can find them more easily later. Things remembers everything so you don't have to.</p>
+                  <h3>No distraction while reading</h3>
+                  <p>By putting content first we removed all UI distractions right from the start and only after we want to go back to level up, we can call Back button by simply taping anywhere on text.</p>
                 </li>
               </ol>
               <p class="switch"><a href="#">Switch to description</a></p>

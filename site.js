@@ -22,6 +22,7 @@
 
   $(document).on('click', '.desc h2 a', function(e) {
     var el, oldEl;
+    $('body').removeClass('hide-popup');
     el = $(e.target).closest('.desc');
     if (el.hasClass('popup')) {
       el.animate({
@@ -32,6 +33,7 @@
       });
     } else {
       oldEl = el;
+      $('body').addClass('hide-popup');
       el = el.clone();
       el.animate({
         'z-index': Number(oldEl.css('z-index')) + 1,
@@ -53,6 +55,20 @@
     e.preventDefault();
     return filmStrip.next();
   });
+
+
+  /*
+  Hide description popup when clicked anywhere
+  */
+
+
+  $(document).on('click', 'body.hide-popup', function(e) {
+    if(!$(e.target).closest('.desc.popup').length) {
+      $('.desc.popup h2 a').trigger('click');
+    }
+  });
+
+
 
   /*
   Play video on click
@@ -98,6 +114,7 @@
       this.strip = $(strip);
       this.currentFigure = this.figures().first().addClass('current');
       this.currentPosition = 0;
+      this.lastSlide = 0;
       this.showLabels();
       video = this.currentVideo();
       if (video.load()) {
@@ -160,6 +177,7 @@
         this.showCards();
       }
       this.showLabels();
+      this.showFigureTitle();
       return setTimeout(function() {
         return _this.showVideoControls();
       }, $.fx.speeds.medium);
@@ -261,6 +279,21 @@
       }
     };
 
+    FilmStrip.prototype.showFigureTitle = function() {
+
+      $('figure .fig-desc').animate({
+        opacity: 0
+      }, 250, timerFunction);
+
+      var currentTitle = this.currentFigure.children('figure .fig-desc');
+
+      currentTitle.animate({
+        opacity: 1
+      }, 250, timerFunction);
+
+    };
+
+
     FilmStrip.prototype.showCards = function() {
       var figureHeight;
       figureHeight = (this.currentFigure.find('img, video').filter(function() {
@@ -335,8 +368,18 @@
     e.preventDefault();
     link = $(e.target);
     if (!link.hasClass('disabled')) {
-      method = link.attr('href').replace('#', '');
-      return filmStrip[method]();
+      var time = (new Date()).getTime();
+      if(time > (filmStrip.lastSlide + 300)) {
+        method = link.attr('href').replace('#', '');
+        filmStrip[method]();
+        filmStrip.lastSlide = time;
+      } else {
+        setTimeout(function() {
+          method = link.attr('href').replace('#', '');
+          filmStrip[method]();
+          filmStrip.lastSlide = time;
+        }, 300);
+      }
     }
   });
 
@@ -418,6 +461,7 @@
       });
     });
   };
+
 
   /*
   Show / hide cards

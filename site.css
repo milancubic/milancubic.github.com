@@ -216,7 +216,7 @@ header {
   height: 900px;
   margin-top: -55px; }
 
-.filmstrip {  
+.filmstrip {
   zoom: 1;
   width: 100000px; }
   .filmstrip:before, .filmstrip:after {
@@ -230,7 +230,7 @@ header {
     position: relative;
     margin-right: 200px;}
     @media only screen and (max-width: 1440px) {
-        .filmstrip figure { 
+        .filmstrip figure {
           margin-right: 110px; } }
     .filmstrip figure img {
       display: inline-block;}
@@ -250,6 +250,21 @@ header {
   .filmstrip article {
     float: left;
     padding-top: 5px; }
+
+.fig-desc {
+  font-size: 14px;
+  line-height: 3;
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
+  font-style: italic;
+  width: 456px;
+  position: absolute;
+  margin-top: 40px;
+  color: #555;
+  border-top: 1px dashed #333;
+  opacity: 0; }
+  @media only screen and (max-width: 1025px) {
+    .fig-desc {
+      width: 412px; }}
 
 @media only screen and (min-width: 1025px) {
   .iphone-shadow, .bada-shadow, .ammo-shadow, .spox-shadow, .webtrekk-shadow {
@@ -276,12 +291,12 @@ header {
 
   .spox-shadow {
     height: 584px;
-    background: url(img/projects/01-spox/intro-frame.png) center center no-repeat; } 
+    background: url(img/projects/01-spox/intro-frame.png) center center no-repeat; }
 
   .webtrekk-shadow {
     height: 733px;
     background: url(img/projects/02-webtrekk/intro-frame.png) center center no-repeat; }}
-   
+
 /* video controls */
 figcaption.video-controls {
   position: absolute;
@@ -446,9 +461,9 @@ figcaption {
     left: 0;
     bottom: 0;
     font-size: 13px;
-    line-height: 1; } 
+    line-height: 1; }
   .card span {
-    color: #febf4c; 
+    color: #febf4c;
     margin: 10px 0px 0px 39px;}
     .card li:hover span {
       text-decoration: underline;}
@@ -456,7 +471,7 @@ figcaption {
       opacity: 0.2;
       text-decoration: none;
       cursor: default; }
-    
+
 
 figure.iPhone video {
   display: none; }

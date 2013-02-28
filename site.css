@@ -12,7 +12,8 @@ b, strong {
 /* layout */
 body {
   font: 14px/1.5 "proxima-nova", helvetica, arial, sans-serif;
-  text-rendering: optimizelegibility; }
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased; }
 
 .centered, .portfolio header, .portfolio footer, .container > div {
   margin: 0 auto;
@@ -492,13 +493,14 @@ nav li {
   .main-nav li {
     border-left: 1px solid #222324;
     padding: 3px 18px;
-    background: transparent; }
+    background: transparent;
+    font-weight: 600; }
     .about .main-nav li {
       border-color: rgba(255, 255, 255, 0.2); }
   .main-nav .about {
     border-left-width: 0; }
   .main-nav a {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.5);
     -webkit-transition: color 0.2s ease-out;
     -moz-transition: color 0.2s ease-out;
     -o-transition: color 0.2s ease-out;
@@ -508,8 +510,7 @@ nav li {
     .main-nav a:hover {
       color: #fff; }
   .portfolio .main-nav .portfolio a, .about .main-nav .about a {
-    color: #fff;
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5); }
+    color: #fff;}
   .main-nav .mail a {
     padding-left: 35px;
     background: url(img/icons/envelope.gif) no-repeat scroll 0 1px transparent; }
